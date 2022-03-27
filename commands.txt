@@ -1,0 +1,29 @@
+composer create-project laravel/laravel lara-inertia-vue
+
+composer require inertiajs/inertia-laravel
+
+php artisan inertia:middleware
+
+    App\Http\Kernel
+
+    'web' => [
+        // ...
+        \App\Http\Middleware\HandleInertiaRequests::class,
+    ],
+
+npm install -g @vue/cli
+npm install -D @vue/compiler-sfc
+
+npm install @inertiajs/inertia @inertiajs/inertia-vue3
+
+setup webpack.mix.js
+
+npm install
+
+npx mix (2 times)
+
+npx mix watch -- to compile js automatic
+
+// progress bar
+
+npm install @inertiajs/progress
